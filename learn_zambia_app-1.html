@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f5b">
+<title>Learn Zambia — Syllabus Learning</title>
+<style>
+:root{--green:#087f5b;--green2:#0b9b70;--ink:#17231f;--muted:#66736d;--bg:#f3f7f5;--card:#fff;--line:#e2eae6;--soft:#e9f6f0}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(130deg,#075b43,#0b9b70);color:#fff;padding:22px 18px 28px;border-radius:0 0 24px 24px}
+.top{display:flex;align-items:center;gap:12px;max-width:900px;margin:auto}.logo{width:46px;height:46px;border-radius:14px;background:#ffffff25;display:grid;place-items:center;font-size:25px}
+h1{font-size:23px;margin:0 0 5px}header p{margin:0;color:#e2fff2;font-size:14px}
+main{max-width:900px;margin:0 auto;padding:18px 14px 40px}.panel{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:17px;margin-bottom:14px;box-shadow:0 3px 14px #102a1c08}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);font-weight:bold;margin-bottom:8px}
+h2{font-size:20px;margin:0 0 12px}h3{font-size:16px;margin:0 0 9px}.muted{color:var(--muted);line-height:1.55;font-size:14px}
+label{display:block;font-weight:bold;font-size:13px;margin:0 0 7px}select,input{width:100%;padding:13px;border:1px solid #d5e1da;border-radius:11px;background:white;font-size:15px;color:var(--ink);margin-bottom:12px}
+button{border:0;border-radius:11px;padding:12px 15px;background:var(--green);color:white;font-size:14px;font-weight:bold;cursor:pointer}button.secondary{background:var(--soft);color:var(--green)}button:active{transform:scale(.99)}
+.row{display:flex;gap:9px;flex-wrap:wrap}.row button{flex:1}
+.nav{display:flex;gap:8px;margin:14px 0;overflow:auto;padding-bottom:3px}.nav button{white-space:nowrap;background:#e5eee9;color:#42534a}.nav button.active{background:var(--green);color:#fff}
+.lesson-title{font-size:23px;line-height:1.25;margin:5px 0 8px}.tag{display:inline-block;background:var(--soft);color:var(--green);border-radius:99px;padding:6px 10px;font-size:12px;font-weight:bold}
+.content{line-height:1.65;font-size:15px}.content h3{margin-top:20px}.content ul{padding-left:22px}.callout{background:#f1f8f4;border-left:4px solid var(--green);padding:12px 14px;border-radius:8px;margin:12px 0}
+.question{padding:14px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}.choice{display:block;width:100%;text-align:left;margin-top:7px;background:#f4f7f5;color:var(--ink);border:1px solid var(--line);font-weight:normal}.choice.selected{border-color:var(--green);background:var(--soft)}.feedback{font-size:13px;margin-top:8px;color:var(--green);font-weight:bold}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:15px}
+.hidden{display:none!important}
+@media(min-width:650px){.selectors{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.selectors .full{grid-column:1/-1}.lesson-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.lesson-layout .panel{margin-bottom:0}}
+</style>
+</head>
+<body>
+<header><div class="top"><div class="logo">📘</div><div><h1>Learn Zambia</h1><p>Follow your school syllabus, one lesson at a time.</p></div></div></header>
+<main>
+<section class="panel">
+<div class="eyebrow">Start learning</div><h2>Choose your Form and subject</h2>
+<div class="selectors">
+<div><label for="formSelect">Form</label><select id="formSelect"><option>Form 1</option><option>Form 2</option><option>Form 3</option><option>Form 4</option></select></div>
+<div><label for="subjectSelect">Subject</label><select id="subjectSelect"><option>History</option><option>English Language</option><option>Religious Education</option></select></div>
+<div class="full"><label for="topicSelect">Syllabus topic</label><select id="topicSelect"><option value="intro">1.1 Introduction to History</option><option value="time">1.2 Measuring Time in History</option></select></div>
+</div>
+<button id="openLesson" class="full">Open selected lesson</button>
+<p class="muted" style="margin-bottom:0">Lessons are arranged by Form → Subject → Syllabus topic → Lesson. This prototype currently contains the first History Form 1 lesson; more syllabus topics will be added in order.</p>
+</section>
+<div class="nav" aria-label="Lesson navigation"><button class="active" data-tab="lesson">📖 Lesson</button><button data-tab="quiz">✍️ Practice quiz</button><button data-tab="progress">📈 My progress</button></div>
+<section id="lessonView">
+<div class="panel">
+<span class="tag" id="lessonTag">FORM 1 • HISTORY</span>
+<div class="lesson-title" id="lessonTitle">1.1 Introduction to History</div>
+<p class="muted" id="lessonSub">Lesson 1: Reasons for Learning History</p>
+<div class="content" id="lessonContent">
+<h3>What is History?</h3><p>History is the study of past events and human experiences. It helps us understand what happened, how people lived, and how societies changed over time.</p>
+<div class="callout"><b>Remember:</b> History is not only about memorising dates. It also involves asking questions, examining evidence, and understanding change.</div>
+<h3>Why do we learn History?</h3>
+<ul><li><b>Learn from past experiences:</b> Past successes and mistakes can help people make thoughtful decisions today.</li><li><b>Understand our families and communities:</b> Stories, photographs, records, and memories can show how a community developed.</li><li><b>Become responsible citizens:</b> Studying the past can help us appreciate cultural heritage and other people’s experiences.</li><li><b>Develop critical thinking:</b> We learn to ask who provided information and what evidence supports it.</li><li><b>Understand other fields:</b> History can help explain developments in areas such as medicine, music, and law.</li></ul>
+<h3>Example from everyday life</h3><p>An older relative might describe how your neighbourhood looked when they were young. Comparing that account with photographs or other records can help you understand what has changed.</p>
+<h3>Key words</h3><ul><li><b>Past:</b> time that has already happened.</li><li><b>Event:</b> something that happens.</li><li><b>Evidence:</b> information used to support an account or conclusion.</li><li><b>Heritage:</b> traditions, places, and things passed down from earlier generations.</li></ul>
+<h3>Activity</h3><p>Ask an older relative or community member what your area was like when they were younger. Write down two changes they remember and one thing that stayed the same.</p>
+<p class="muted"><b>Syllabus connection:</b> Form 1 History, Topic 1.1 “Introduction to History,” including reasons for learning History and communicating the relevance of past events.</p>
+</div>
+</div>
+</section>
+<section id="quizView" class="panel hidden">
+<div class="eyebrow">Check what you understood</div><h2>Practice quiz</h2><p class="muted">Choose an answer for each question. Your score updates as you answer.</p>
+<div id="quizQuestions"></div><div class="callout" id="scoreBox">Answered: 0 of 3 • Score: 0</div><button class="secondary" id="resetQuiz">Try again</button>
+</section>
+<section id="progressView" class="panel hidden">
+<div class="eyebrow">Your learning</div><h2>Progress</h2><p class="muted">Your progress is stored on this device while you use this browser.</p>
+<div class="callout"><b>History Form 1</b><br><span id="progressText">No quiz completed yet.</span></div>
+<button class="secondary" id="clearProgress">Reset local progress</button>
+</section>
+<footer><strong>Learn Zambia</strong><br>Learning materials organized to follow the Zambian school syllabus.<br><br>© 2026 @ENOCK MUKANDI. All rights reserved.<br><span style="font-size:11px">Created for learning and educational use.</span></footer>
+</main>
+<script>
+const quiz=[
+{q:"What is History?",opts:["The study of future events","The study of past events and human experiences","The study of weather only"],a:1,why:"History examines events and human experiences from the past."},
+{q:"Which is a reason for learning History?",opts:["To learn from past experiences","To avoid asking questions","To memorise names without understanding"],a:0,why:"Past experiences can help people think about present and future decisions."},
+{q:"Which question supports critical thinking about a historical account?",opts:["Can I ignore other sources?","Is the story entertaining?","Who provided this information, and what evidence supports it?"],a:2,why:"Historians consider the source and the evidence behind an account."}
+];
+let chosen={};
+const qArea=document.getElementById('quizQuestions');
+function renderQuiz(){
+ qArea.innerHTML='';
+ quiz.forEach((item,i)=>{
+  const box=document.createElement('div');box.className='question';
+  const title=document.createElement('b');title.textContent=(i+1)+'. '+item.q;box.appendChild(title);
+  item.opts.forEach((opt,j)=>{
+   const b=document.createElement('button');b.className='choice'+(chosen[i]===j?' selected':'');b.textContent=String.fromCharCode(65+j)+'. '+opt;
+   b.addEventListener('click',()=>{chosen[i]=j;renderQuiz();});box.appendChild(b);
+  });
+  if(chosen[i]!==undefined){const f=document.createElement('div');f.className='feedback';f.textContent=(chosen[i]===item.a?'Correct! ':'Not quite. ')+item.why;box.appendChild(f);}
+  qArea.appendChild(box);
+ });
+ const answered=Object.keys(chosen).length,score=quiz.filter((q,i)=>chosen[i]===q.a).length;
+ document.getElementById('scoreBox').textContent=`Answered: ${answered} of ${quiz.length} • Score: ${score}`;
+ if(answered===quiz.length){localStorage.setItem('learnZambiaHistoryScore',score);localStorage.setItem('learnZambiaHistoryDone','yes');}
+}
+renderQuiz();
+document.getElementById('resetQuiz').addEventListener('click',()=>{chosen={};renderQuiz();});
+document.querySelectorAll('.nav button').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');
+ ['lesson','quiz','progress'].forEach(t=>document.getElementById(t+'View').classList.toggle('hidden',t!==btn.dataset.tab));
+ if(btn.dataset.tab==='progress'){const done=localStorage.getItem('learnZambiaHistoryDone');document.getElementById('progressText').textContent=done?`Quiz completed. Latest score: ${localStorage.getItem('learnZambiaHistoryScore')} / 3.`:'No quiz completed yet.';}
+}));
+document.getElementById('openLesson').addEventListener('click',()=>{
+ const subject=document.getElementById('subjectSelect').value,form=document.getElementById('formSelect').value;
+ const topic=document.getElementById('topicSelect').value;
+ if(subject==='History'&&form==='Form 1'&&topic==='intro'){
+  document.getElementById('lessonTitle').textContent='1.1 Introduction to History';
+  document.getElementById('lessonSub').textContent='Lesson 1: Reasons for Learning History';
+  document.getElementById('lessonTag').textContent='FORM 1 • HISTORY';
+  document.querySelector('[data-tab="lesson"]').click();
+ } else {
+  alert('This lesson is not included in the first prototype yet. The selection is saved in the interface; we will add the syllabus content next.');
+ }
+});
+document.getElementById('clearProgress').addEventListener('click',()=>{localStorage.removeItem('learnZambiaHistoryScore');localStorage.removeItem('learnZambiaHistoryDone');document.getElementById('progressText').textContent='Progress reset.';});
+</script>
+</body>
+</html>
