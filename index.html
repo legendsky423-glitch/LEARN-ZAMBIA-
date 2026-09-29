@@ -3,115 +3,1259 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#087f5b">
-<title>Learn Zambia — Syllabus Learning</title>
+
+<title>LEARN ZAMBIA 🇿🇲</title>
+
 <style>
-:root{--green:#087f5b;--green2:#0b9b70;--ink:#17231f;--muted:#66736d;--bg:#f3f7f5;--card:#fff;--line:#e2eae6;--soft:#e9f6f0}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
-header{background:linear-gradient(130deg,#075b43,#0b9b70);color:#fff;padding:22px 18px 28px;border-radius:0 0 24px 24px}
-.top{display:flex;align-items:center;gap:12px;max-width:900px;margin:auto}.logo{width:46px;height:46px;border-radius:14px;background:#ffffff25;display:grid;place-items:center;font-size:25px}
-h1{font-size:23px;margin:0 0 5px}header p{margin:0;color:#e2fff2;font-size:14px}
-main{max-width:900px;margin:0 auto;padding:18px 14px 40px}.panel{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:17px;margin-bottom:14px;box-shadow:0 3px 14px #102a1c08}
-.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);font-weight:bold;margin-bottom:8px}
-h2{font-size:20px;margin:0 0 12px}h3{font-size:16px;margin:0 0 9px}.muted{color:var(--muted);line-height:1.55;font-size:14px}
-label{display:block;font-weight:bold;font-size:13px;margin:0 0 7px}select,input{width:100%;padding:13px;border:1px solid #d5e1da;border-radius:11px;background:white;font-size:15px;color:var(--ink);margin-bottom:12px}
-button{border:0;border-radius:11px;padding:12px 15px;background:var(--green);color:white;font-size:14px;font-weight:bold;cursor:pointer}button.secondary{background:var(--soft);color:var(--green)}button:active{transform:scale(.99)}
-.row{display:flex;gap:9px;flex-wrap:wrap}.row button{flex:1}
-.nav{display:flex;gap:8px;margin:14px 0;overflow:auto;padding-bottom:3px}.nav button{white-space:nowrap;background:#e5eee9;color:#42534a}.nav button.active{background:var(--green);color:#fff}
-.lesson-title{font-size:23px;line-height:1.25;margin:5px 0 8px}.tag{display:inline-block;background:var(--soft);color:var(--green);border-radius:99px;padding:6px 10px;font-size:12px;font-weight:bold}
-.content{line-height:1.65;font-size:15px}.content h3{margin-top:20px}.content ul{padding-left:22px}.callout{background:#f1f8f4;border-left:4px solid var(--green);padding:12px 14px;border-radius:8px;margin:12px 0}
-.question{padding:14px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}.choice{display:block;width:100%;text-align:left;margin-top:7px;background:#f4f7f5;color:var(--ink);border:1px solid var(--line);font-weight:normal}.choice.selected{border-color:var(--green);background:var(--soft)}.feedback{font-size:13px;margin-top:8px;color:var(--green);font-weight:bold}
-footer{text-align:center;color:var(--muted);font-size:12px;padding:15px}
-.hidden{display:none!important}
-@media(min-width:650px){.selectors{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.selectors .full{grid-column:1/-1}.lesson-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.lesson-layout .panel{margin-bottom:0}}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+  background:#f4f7f5;
+  color:#172117;
+}
+
+header{
+  background:#087f3b;
+  color:white;
+  padding:22px 15px;
+  text-align:center;
+}
+
+header h1{
+  font-size:30px;
+}
+
+header p{
+  margin-top:6px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.screen{
+  display:none;
+}
+
+.screen.active{
+  display:block;
+}
+
+.hero{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  margin-bottom:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.hero h2{
+  color:#087f3b;
+  margin-bottom:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+  cursor:pointer;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+}
+
+.card h3{
+  color:#087f3b;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#555;
+  line-height:1.5;
+}
+
+.back{
+  background:#087f3b;
+  color:white;
+  border:0;
+  padding:10px 16px;
+  border-radius:9px;
+  cursor:pointer;
+  margin-bottom:18px;
+}
+
+.lesson{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.lesson h2{
+  color:#087f3b;
+  margin-bottom:15px;
+}
+
+.lesson h3{
+  margin-top:22px;
+  margin-bottom:10px;
+}
+
+.lesson p,
+.lesson li{
+  line-height:1.7;
+}
+
+.lesson ul{
+  padding-left:22px;
+}
+
+.formula{
+  background:#e9f7ee;
+  border-left:5px solid #087f3b;
+  padding:15px;
+  border-radius:8px;
+  margin:12px 0;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.example{
+  background:#f1f1f1;
+  padding:16px;
+  border-radius:10px;
+  margin:10px 0;
+}
+
+.question{
+  background:#f7f7f7;
+  padding:18px;
+  border-radius:12px;
+  margin:15px 0;
+}
+
+.question label{
+  display:block;
+  padding:8px;
+}
+
+button.primary{
+  background:#087f3b;
+  color:white;
+  border:0;
+  padding:13px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  margin-top:15px;
+}
+
+.result{
+  display:none;
+  background:#e9f7ee;
+  padding:20px;
+  border-radius:12px;
+  margin-top:20px;
+  font-weight:bold;
+}
+
+.badge{
+  display:inline-block;
+  background:#087f3b;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#666;
+}
 </style>
 </head>
+
+
 <body>
-<header><div class="top"><div class="logo">📘</div><div><h1>Learn Zambia</h1><p>Follow your school syllabus, one lesson at a time.</p></div></div></header>
-<main>
-<section class="panel">
-<div class="eyebrow">Start learning</div><h2>Choose your Form and subject</h2>
-<div class="selectors">
-<div><label for="formSelect">Form</label><select id="formSelect"><option>Form 1</option><option>Form 2</option><option>Form 3</option><option>Form 4</option></select></div>
-<div><label for="subjectSelect">Subject</label><select id="subjectSelect"><option>History</option><option>English Language</option><option>Religious Education</option></select></div>
-<div class="full"><label for="topicSelect">Syllabus topic</label><select id="topicSelect"><option value="intro">1.1 Introduction to History</option><option value="time">1.2 Measuring Time in History</option></select></div>
+
+<header>
+  <h1>LEARN ZAMBIA 🇿🇲</h1>
+  <p>Learn • Practise • Apply • Succeed</p>
+</header>
+
+
+<div class="container">
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="screen active">
+
+  <div class="hero">
+    <h2>Welcome to LEARN ZAMBIA</h2>
+
+    <p>
+      A learning platform for the Zambian secondary school
+      curriculum. Choose your Form, subject, term and topic.
+    </p>
+
+    <p style="margin-top:10px;">
+      Learn the lesson, practise real-life situations and test
+      your understanding.
+    </p>
+  </div>
+
+  <h2 style="margin-bottom:15px;">Choose your Form</h2>
+
+  <div class="grid">
+
+    <div class="card" onclick="openForm(1)">
+      <h3>📘 Form 1</h3>
+      <p>Begin your secondary school learning journey.</p>
+    </div>
+
+    <div class="card" onclick="openForm(2)">
+      <h3>📗 Form 2</h3>
+      <p>Build knowledge and apply concepts.</p>
+    </div>
+
+    <div class="card" onclick="openForm(3)">
+      <h3>📙 Form 3</h3>
+      <p>Develop deeper subject knowledge.</p>
+    </div>
+
+    <div class="card" onclick="openForm(4)">
+      <h3>📕 Form 4</h3>
+      <p>Prepare for examinations and application.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FORM ================= -->
+
+<section id="formScreen" class="screen">
+
+  <button class="back" onclick="home()">← Home</button>
+
+  <div class="hero">
+    <h2 id="formTitle"></h2>
+    <p>Choose a subject.</p>
+  </div>
+
+  <div id="subjects" class="grid"></div>
+
+</section>
+
+
+<!-- ================= SUBJECT ================= -->
+
+<section id="subjectScreen" class="screen">
+
+  <button class="back" onclick="backToForm()">← Back</button>
+
+  <div class="hero">
+    <h2 id="subjectTitle"></h2>
+    <p>Choose a term.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openTerm(1)">
+      <h3>📚 Term 1</h3>
+      <p>View Term 1 topics.</p>
+    </div>
+
+    <div class="card" onclick="openTerm(2)">
+      <h3>📚 Term 2</h3>
+      <p>View Term 2 topics.</p>
+    </div>
+
+    <div class="card" onclick="openTerm(3)">
+      <h3>📚 Term 3</h3>
+      <p>View Term 3 topics.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TOPICS ================= -->
+
+<section id="topicScreen" class="screen">
+
+  <button class="back" onclick="backToSubject()">← Back</button>
+
+  <div class="hero">
+    <h2 id="topicTitle"></h2>
+    <p>Select a topic to study.</p>
+  </div>
+
+  <div id="topics" class="grid"></div>
+
+</section>
+
+
+<!-- ================= LESSON ================= -->
+
+<section id="lessonScreen" class="screen">
+
+  <button class="back" onclick="backToTopics()">← Back</button>
+
+  <div class="lesson">
+
+    <span class="badge">LEARN ZAMBIA</span>
+
+    <h2 id="lessonTitle"></h2>
+
+    <div id="lessonContent"></div>
+
+    <button class="primary" onclick="openQuiz()">
+      🧠 Take Topic Quiz
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- ================= QUIZ ================= -->
+
+<section id="quizScreen" class="screen">
+
+  <button class="back" onclick="backToLesson()">← Back</button>
+
+  <div class="lesson">
+
+    <span class="badge">COMPETENCE & APPLICATION QUIZ</span>
+
+    <h2 id="quizTitle"></h2>
+
+    <p style="margin-top:10px;">
+      Read the situation carefully. Apply what you have learned.
+    </p>
+
+    <div id="quiz"></div>
+
+    <button class="primary" onclick="submitQuiz()">
+      Submit Quiz
+    </button>
+
+    <div id="quizResult" class="result"></div>
+
+  </div>
+
+</section>
+
 </div>
-<button id="openLesson" class="full">Open selected lesson</button>
-<p class="muted" style="margin-bottom:0">Lessons are arranged by Form → Subject → Syllabus topic → Lesson. This prototype currently contains the first History Form 1 lesson; more syllabus topics will be added in order.</p>
-</section>
-<div class="nav" aria-label="Lesson navigation"><button class="active" data-tab="lesson">📖 Lesson</button><button data-tab="quiz">✍️ Practice quiz</button><button data-tab="progress">📈 My progress</button></div>
-<section id="lessonView">
-<div class="panel">
-<span class="tag" id="lessonTag">FORM 1 • HISTORY</span>
-<div class="lesson-title" id="lessonTitle">1.1 Introduction to History</div>
-<p class="muted" id="lessonSub">Lesson 1: Reasons for Learning History</p>
-<div class="content" id="lessonContent">
-<h3>What is History?</h3><p>History is the study of past events and human experiences. It helps us understand what happened, how people lived, and how societies changed over time.</p>
-<div class="callout"><b>Remember:</b> History is not only about memorising dates. It also involves asking questions, examining evidence, and understanding change.</div>
-<h3>Why do we learn History?</h3>
-<ul><li><b>Learn from past experiences:</b> Past successes and mistakes can help people make thoughtful decisions today.</li><li><b>Understand our families and communities:</b> Stories, photographs, records, and memories can show how a community developed.</li><li><b>Become responsible citizens:</b> Studying the past can help us appreciate cultural heritage and other people’s experiences.</li><li><b>Develop critical thinking:</b> We learn to ask who provided information and what evidence supports it.</li><li><b>Understand other fields:</b> History can help explain developments in areas such as medicine, music, and law.</li></ul>
-<h3>Example from everyday life</h3><p>An older relative might describe how your neighbourhood looked when they were young. Comparing that account with photographs or other records can help you understand what has changed.</p>
-<h3>Key words</h3><ul><li><b>Past:</b> time that has already happened.</li><li><b>Event:</b> something that happens.</li><li><b>Evidence:</b> information used to support an account or conclusion.</li><li><b>Heritage:</b> traditions, places, and things passed down from earlier generations.</li></ul>
-<h3>Activity</h3><p>Ask an older relative or community member what your area was like when they were younger. Write down two changes they remember and one thing that stayed the same.</p>
-<p class="muted"><b>Syllabus connection:</b> Form 1 History, Topic 1.1 “Introduction to History,” including reasons for learning History and communicating the relevance of past events.</p>
-</div>
-</div>
-</section>
-<section id="quizView" class="panel hidden">
-<div class="eyebrow">Check what you understood</div><h2>Practice quiz</h2><p class="muted">Choose an answer for each question. Your score updates as you answer.</p>
-<div id="quizQuestions"></div><div class="callout" id="scoreBox">Answered: 0 of 3 • Score: 0</div><button class="secondary" id="resetQuiz">Try again</button>
-</section>
-<section id="progressView" class="panel hidden">
-<div class="eyebrow">Your learning</div><h2>Progress</h2><p class="muted">Your progress is stored on this device while you use this browser.</p>
-<div class="callout"><b>History Form 1</b><br><span id="progressText">No quiz completed yet.</span></div>
-<button class="secondary" id="clearProgress">Reset local progress</button>
-</section>
-<footer><strong>Learn Zambia</strong><br>Learning materials organized to follow the Zambian school syllabus.<br><br>© 2026 @ENOCK MUKANDI. All rights reserved.<br><span style="font-size:11px">Created for learning and educational use.</span></footer>
-</main>
+
+
+<footer>
+  <p>© 2026 LEARN ZAMBIA 🇿🇲</p>
+  <p>Learning for Zambia.</p>
+</footer>
+
+
 <script>
-const quiz=[
-{q:"What is History?",opts:["The study of future events","The study of past events and human experiences","The study of weather only"],a:1,why:"History examines events and human experiences from the past."},
-{q:"Which is a reason for learning History?",opts:["To learn from past experiences","To avoid asking questions","To memorise names without understanding"],a:0,why:"Past experiences can help people think about present and future decisions."},
-{q:"Which question supports critical thinking about a historical account?",opts:["Can I ignore other sources?","Is the story entertaining?","Who provided this information, and what evidence supports it?"],a:2,why:"Historians consider the source and the evidence behind an account."}
+
+/* =====================================================
+   APP STATE
+===================================================== */
+
+let currentForm = 1;
+let currentSubject = "";
+let currentTerm = 1;
+let currentTopic = "";
+
+
+/* =====================================================
+   SUBJECTS
+   These correspond to subjects listed on the Ministry
+   Form 1-4 curriculum page.
+===================================================== */
+
+const subjects = [
+
+  "Mathematics",
+  "English",
+  "Physics",
+  "Chemistry",
+  "Biology",
+  "History",
+  "Civic Education",
+  "Geography",
+  "Religious Education",
+  "ICT",
+  "Computer Science",
+  "Agricultural Science",
+  "Commerce",
+  "Principles of Accounts",
+  "Design and Technology",
+  "Food and Nutrition",
+  "Fashion and Fabrics",
+  "French",
+  "Literature in English",
+  "Physical Education",
+  "Music Arts",
+  "Art and Design",
+  "Travel and Tourism",
+  "Hospitality Management",
+  "Zambian Languages"
+
 ];
-let chosen={};
-const qArea=document.getElementById('quizQuestions');
-function renderQuiz(){
- qArea.innerHTML='';
- quiz.forEach((item,i)=>{
-  const box=document.createElement('div');box.className='question';
-  const title=document.createElement('b');title.textContent=(i+1)+'. '+item.q;box.appendChild(title);
-  item.opts.forEach((opt,j)=>{
-   const b=document.createElement('button');b.className='choice'+(chosen[i]===j?' selected':'');b.textContent=String.fromCharCode(65+j)+'. '+opt;
-   b.addEventListener('click',()=>{chosen[i]=j;renderQuiz();});box.appendChild(b);
-  });
-  if(chosen[i]!==undefined){const f=document.createElement('div');f.className='feedback';f.textContent=(chosen[i]===item.a?'Correct! ':'Not quite. ')+item.why;box.appendChild(f);}
-  qArea.appendChild(box);
- });
- const answered=Object.keys(chosen).length,score=quiz.filter((q,i)=>chosen[i]===q.a).length;
- document.getElementById('scoreBox').textContent=`Answered: ${answered} of ${quiz.length} • Score: ${score}`;
- if(answered===quiz.length){localStorage.setItem('learnZambiaHistoryScore',score);localStorage.setItem('learnZambiaHistoryDone','yes');}
+
+
+/* =====================================================
+   VERIFIED PHYSICS STRUCTURE
+===================================================== */
+
+const physicsTopics = {
+
+  1: [
+
+    "Introduction to Physics",
+    "General Physics",
+    "Elementary Astronomy",
+    "Geophysics",
+    "Mechanics I"
+
+  ],
+
+  2: [
+
+    "Mechanics II",
+    "Thermal Physics",
+    "Wave Motion and Sound"
+
+  ],
+
+  3: [
+
+    "Light",
+    "Static Electricity",
+    "Current Electricity",
+    "Magnetism",
+    "Electromagnetism",
+    "Electromagnetic Induction"
+
+  ],
+
+  4: [
+
+    "Basic Electronics",
+    "Electronic Communication Systems",
+    "Atomic Physics",
+    "Renewable Energy"
+
+  ]
+
+};
+
+
+/* =====================================================
+   OTHER SUBJECT TOPICS
+   The structure is ready for the complete official
+   syllabus database to be inserted subject by subject.
+===================================================== */
+
+const syllabus = {
+
+  "Physics": physicsTopics,
+
+  "Mathematics": {
+
+    1: [
+      "Number and Numeration",
+      "Algebra",
+      "Geometry",
+      "Measurement",
+      "Statistics"
+    ],
+
+    2: [
+      "Algebra",
+      "Geometry",
+      "Statistics",
+      "Probability"
+    ],
+
+    3: [
+      "Algebra",
+      "Geometry",
+      "Trigonometry",
+      "Statistics"
+    ],
+
+    4: [
+      "Algebra",
+      "Geometry",
+      "Trigonometry",
+      "Statistics",
+      "Probability"
+    ]
+
+  },
+
+  "Civic Education": {
+
+    1: [
+      "Citizenship",
+      "Human Rights",
+      "Responsibilities",
+      "National Values"
+    ],
+
+    2: [
+      "Democracy",
+      "Governance",
+      "Human Rights",
+      "Community Participation"
+    ],
+
+    3: [
+      "National Development",
+      "Good Governance",
+      "Globalisation"
+    ],
+
+    4: [
+      "Governance",
+      "Development",
+      "Human Rights",
+      "Global Citizenship"
+    ]
+
+  },
+
+  "History": {
+
+    1: [
+      "Sources of History",
+      "Stone Age",
+      "Bantu Migration"
+    ],
+
+    2: [
+      "Colonialism",
+      "Company Rule",
+      "Federation"
+    ],
+
+    3: [
+      "Nationalism",
+      "Independence"
+    ],
+
+    4: [
+      "Independent Zambia",
+      "Political and Economic Development"
+    ]
+
+  },
+
+  "ICT": {
+
+    1: [
+      "Introduction to ICT",
+      "Computer Hardware",
+      "Computer Software",
+      "Productivity Tools"
+    ],
+
+    2: [
+      "Networks",
+      "Internet",
+      "Cybersecurity",
+      "Digital Citizenship"
+    ],
+
+    3: [
+      "Cloud Computing",
+      "Data and Information",
+      "Digital Communication"
+    ],
+
+    4: [
+      "ICT Applications",
+      "Cybersecurity",
+      "Emerging Technologies"
+    ]
+
+  }
+
+};
+
+
+/* =====================================================
+   LESSON DATABASE
+===================================================== */
+
+const lessons = {
+
+"Mechanics I": {
+
+  title:"Physics — Mechanics I",
+
+  html:`
+
+  <h3>📖 Lesson</h3>
+
+  <p>
+  Mechanics is the branch of Physics concerned with the motion
+  of objects and the forces that affect their motion.
+  </p>
+
+  <h3>🎯 Learning focus</h3>
+
+  <ul>
+    <li>Describe motion.</li>
+    <li>Measure distance and time.</li>
+    <li>Calculate speed.</li>
+    <li>Interpret motion in real-life situations.</li>
+  </ul>
+
+  <h3>🧮 Formula</h3>
+
+  <div class="formula">
+    Speed = Distance ÷ Time
+  </div>
+
+  <h3>✍️ Worked Example</h3>
+
+  <div class="example">
+
+    <p>
+    A bus travels 120 km in 3 hours.
+    Find its average speed.
+    </p>
+
+    <br>
+
+    <p>
+    Speed = Distance ÷ Time
+    </p>
+
+    <p>
+    Speed = 120 km ÷ 3 h
+    </p>
+
+    <p>
+    <strong>Speed = 40 km/h</strong>
+    </p>
+
+  </div>
+
+  <h3>🌍 Real-life application</h3>
+
+  <p>
+  A driver needs to understand speed when travelling on
+  Zambian roads. Speed must be appropriate for the road,
+  traffic and surrounding conditions.
+  </p>
+
+  <h3>🧠 Scenario</h3>
+
+  <p>
+  A school bus is travelling through a busy area. The driver
+  increases the speed even though there are many pedestrians
+  near the road.
+  </p>
+
+  <p>
+  <strong>Question:</strong>
+  What Physics concept can be applied to this situation and
+  why is understanding speed important?
+  </p>
+
+  `
+
+},
+
+
+"Introduction to Physics": {
+
+  title:"Physics — Introduction to Physics",
+
+  html:`
+
+  <h3>📖 Lesson</h3>
+
+  <p>
+  Physics is the study of matter, energy, forces, motion and
+  the interactions between them.
+  </p>
+
+  <h3>🔬 Physics in society</h3>
+
+  <ul>
+    <li>Transport</li>
+    <li>Communication</li>
+    <li>Electricity</li>
+    <li>Medicine</li>
+    <li>Construction</li>
+    <li>Technology</li>
+  </ul>
+
+  <h3>🌍 Application</h3>
+
+  <p>
+  Physics is used in everyday life. For example, electricity
+  allows homes, schools, hospitals and businesses to operate
+  electrical equipment.
+  </p>
+
+  `
+
+},
+
+
+"Sources of History": {
+
+  title:"History — Sources of History",
+
+  html:`
+
+  <h3>📖 Lesson</h3>
+
+  <p>
+  Historical sources are materials or evidence that help us
+  learn about people, places and events of the past.
+  </p>
+
+  <h3>Examples</h3>
+
+  <ul>
+    <li>Oral traditions</li>
+    <li>Written records</li>
+    <li>Archaeological evidence</li>
+    <li>Artefacts</li>
+    <li>Historical buildings</li>
+  </ul>
+
+  <h3>🌍 Society application</h3>
+
+  <p>
+  If an old settlement is discovered in a Zambian community,
+  historians can examine artefacts and other evidence to
+  understand how people lived in the past.
+  </p>
+
+  `
+
+},
+
+
+"Democracy": {
+
+  title:"Civic Education — Democracy",
+
+  html:`
+
+  <h3>📖 Lesson</h3>
+
+  <p>
+  Democracy involves citizens participating in the governance
+  of their country and having their rights respected.
+  </p>
+
+  <h3>📌 Key ideas</h3>
+
+  <ul>
+    <li>Participation</li>
+    <li>Rule of law</li>
+    <li>Accountability</li>
+    <li>Respect for rights</li>
+  </ul>
+
+  <h3>🌍 Scenario</h3>
+
+  <p>
+  A community needs to choose representatives to raise local
+  concerns. Community members are given an opportunity to
+  participate.
+  </p>
+
+  <p>
+  This demonstrates the importance of participation in
+  democratic governance.
+  </p>
+
+  `
+
+},
+
+
+"Number and Numeration": {
+
+  title:"Mathematics — Number and Numeration",
+
+  html:`
+
+  <h3>📖 Lesson</h3>
+
+  <p>
+  Number and numeration deals with understanding, representing
+  and using numbers in mathematical situations.
+  </p>
+
+  <h3>🌍 Real-life application</h3>
+
+  <p>
+  Numbers are used when calculating prices, measuring distances,
+  managing money and interpreting information.
+  </p>
+
+  <h3>🧠 Scenario</h3>
+
+  <p>
+  A shopkeeper records the number of products sold each day.
+  The information can be organised and used to calculate totals.
+  </p>
+
+  `
+
 }
-renderQuiz();
-document.getElementById('resetQuiz').addEventListener('click',()=>{chosen={};renderQuiz();});
-document.querySelectorAll('.nav button').forEach(btn=>btn.addEventListener('click',()=>{
- document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));btn.classList.add('active');
- ['lesson','quiz','progress'].forEach(t=>document.getElementById(t+'View').classList.toggle('hidden',t!==btn.dataset.tab));
- if(btn.dataset.tab==='progress'){const done=localStorage.getItem('learnZambiaHistoryDone');document.getElementById('progressText').textContent=done?`Quiz completed. Latest score: ${localStorage.getItem('learnZambiaHistoryScore')} / 3.`:'No quiz completed yet.';}
-}));
-document.getElementById('openLesson').addEventListener('click',()=>{
- const subject=document.getElementById('subjectSelect').value,form=document.getElementById('formSelect').value;
- const topic=document.getElementById('topicSelect').value;
- if(subject==='History'&&form==='Form 1'&&topic==='intro'){
-  document.getElementById('lessonTitle').textContent='1.1 Introduction to History';
-  document.getElementById('lessonSub').textContent='Lesson 1: Reasons for Learning History';
-  document.getElementById('lessonTag').textContent='FORM 1 • HISTORY';
-  document.querySelector('[data-tab="lesson"]').click();
- } else {
-  alert('This lesson is not included in the first prototype yet. The selection is saved in the interface; we will add the syllabus content next.');
+
+};
+
+
+/* =====================================================
+   QUIZZES
+===================================================== */
+
+const quizzes = {
+
+
+"Mechanics I":[
+
+ {
+  q:"A bus travels 150 km in 3 hours. What is its average speed?",
+
+  options:[
+   "30 km/h",
+   "40 km/h",
+   "50 km/h",
+   "60 km/h"
+  ],
+
+  answer:2
+ },
+
+ {
+  q:"A driver is travelling through a busy area with pedestrians. Why is understanding speed important?",
+
+  options:[
+   "It changes the colour of the vehicle.",
+   "It helps the driver manage movement safely.",
+   "It increases the road width.",
+   "It changes the mass of the vehicle."
+  ],
+
+  answer:1
+ },
+
+ {
+  q:"A student walks 2 km in 1 hour. What is the student's average speed?",
+
+  options:[
+   "1 km/h",
+   "2 km/h",
+   "3 km/h",
+   "4 km/h"
+  ],
+
+  answer:1
  }
-});
-document.getElementById('clearProgress').addEventListener('click',()=>{localStorage.removeItem('learnZambiaHistoryScore');localStorage.removeItem('learnZambiaHistoryDone');document.getElementById('progressText').textContent='Progress reset.';});
-</script>
-</body>
-</html>
+
+],
+
+
+"Sources of History":[
+
+ {
+  q:"A historian discovers pottery at an old settlement. What can this be used as?",
+
+  options:[
+   "Historical evidence",
+   "A modern law",
+   "A weather forecast",
+   "A mathematical formula"
+  ],
+
+  answer:0
+ },
+
+ {
+  q:"Why should historians compare different sources?",
+
+  options:[
+   "One source may not give the complete picture.",
+   "All historical sources are useless.",
+   "Only modern information matters.",
+   "History has no evidence."
+  ],
+
+  answer:0
+ }
+
+],
+
+
+"Democracy":[
+
+ {
+  q:"A community allows its members to participate in choosing representatives. Which principle is demonstrated?",
+
+  options:[
+   "Participation",
+   "Isolation",
+   "Discrimination",
+   "Silence"
+  ],
+
+  answer:0
+ },
+
+ {
+  q:"A citizen peacefully expresses an opinion about a public issue. What does this demonstrate?",
+
+  options:[
+   "Citizen participation",
+   "Ignoring the law",
+   "Preventing others from speaking",
+   "Avoiding responsibility"
+  ],
+
+  answer:0
+ }
+
+]
+
+};
+
+
+/* =====================================================
+   SCREEN FUNCTIONS
+===================================================== */
+
+function show(id){
+
+  document.querySelectorAll(".screen").forEach(
+    s=>s.classList.remove("active")
+  );
+
+  document.getElementById(id).classList.add("active");
+
+}
+
+
+function home(){
+
+  show("home");
+
+}
+
+
+function openForm(form){
+
+  currentForm=form;
+
+  document.getElementById("formTitle").textContent=
+    "Form "+form+" — Subjects";
+
+  const box=document.getElementById("subjects");
+
+  box.innerHTML="";
+
+  subjects.forEach(subject=>{
+
+    const card=document.createElement("div");
+
+    card.className="card";
+
+    card.innerHTML=`
+      <h3>📚 ${subject}</h3>
+      <p>Open ${subject}.</p>
+    `;
+
+    card.onclick=()=>openSubject(subject);
+
+    box.appendChild(card);
+
+  });
+
+  show("formScreen");
+
+}
+
+
+function backToForm(){
+
+  show("formScreen");
+
+}
+
+
+function openSubject(subject){
+
+  currentSubject=subject;
+
+  document.getElementById("subjectTitle").textContent=
+    "Form "+currentForm+" — "+subject;
+
+  show("subjectScreen");
+
+}
+
+
+function backToSubject(){
+
+  show("subjectScreen");
+
+}
+
+
+function openTerm(term){
+
+  currentTerm=term;
+
+  document.getElementById("topicTitle").textContent=
+    "Form "+currentForm+
+    " — "+currentSubject+
+    " — Term "+term;
+
+  const box=document.getElementById("topics");
+
+  box.innerHTML="";
+
+  let topics=[];
+
+  if(
+    syllabus[currentSubject] &&
+    syllabus[currentSubject][currentForm]
+  ){
+
+    topics=syllabus[currentSubject][currentForm];
+
+  }
+
+  if(topics.length===0){
+
+    box.innerHTML=`
+
+      <div class="card">
+
+        <h3>📚 Topics being added</h3>
+
+        <p>
+          The syllabus structure is ready.
+          The verified topic list for this subject
+          will be added here.
+        </p>
+
+      </div>
+
+    `;
+
+  }else{
+
+    topics.forEach(topic=>{
+
+      const card=document.createElement("div");
+
+      card.className="card";
+
+      card.innerHTML=`
+        <h3>📖 ${topic}</h3>
+        <p>Open lesson and practice.</p>
+      `;
+
+      card.onclick=()=>openLesson(topic);
+
+      box.appendChild(card);
+
+    });
+
+  }
+
+  show("topicScreen");
+
+}
+
+
+function backToTopics(){
+
+  show("topicScreen");
+
+}
+
+
+/* =====================================================
+   LESSON
+===================================================== */
+
+function openLesson(topic){
+
+  currentTopic=topic;
+
+  document.getElementById("lessonTitle").textContent=
+    topic;
+
+  const lesson=lessons[topic];
+
+  if(lesson){
+
+    document.getElementById("lessonContent").innerHTML=
+      lesson.html;
+
+  }else{
+
+    document.getElementById("lessonContent").innerHTML=`
+
+      <h3>📖 Lesson</h3>
+
+      <p>
+      This topic is part of the LEARN ZAMBIA syllabus.
+      </p>
+
+      <h3>🎯 Learning</h3>
+
+      <p>
+      Study the topic and apply the knowledge to
+      situations in your community and everyday life.
+      </p>
+
+      <h3>🧠 Competence Practice</h3>
+
+      <p>
+      Explain how this topic can be applied in
+      real life.
+      </p>
+
+    `;
+
+  }
+
+  show("lessonScreen");
+
+}
+
+
+function backToLesson(){
+
+  show("lessonScreen");
+
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+function openQuiz(){
+
+  const questions=quizzes[currentTopic] || [];
+
+  document.getElementById("quizTitle").textContent=
+    currentTopic+" — Quiz";
+
+  const box=document.getElementById("quiz");
+
+  box.innerHTML="";
+
+  document.getElementById("quizResult").style.display="none";
+
+  if(questions.length===0){
+
+    box.innerHTML=`
+
+      <div class="question">
+
+        <h3>Quiz coming soon</h3>
+
+        <p>
+        Questions for this topic will be added as
+        the syllabus content is developed.
+        </p>
+
+      </div>
+
+    `;
+
+  }else{
+
+    questions.forEach((question,index)=>{
+
+      let html=`
+
+        <div class="question">
+
+          <p>
+            <strong>Question ${index+1}</strong>
+          </p>
+
+          <p style="margin-top:8px;">
+            ${question.q}
+          </p>
+
+      `;
+
+      question.options.forEach((option,i)=>{
+
+        html+=`
+
+          <label>
+
+            <input
+              type="radio"
+              name="q${index}"
+              value="${i}"
+            >
+
+            ${option}
+
+          </label>
+
+        `;
+
+      });
+
+      html+="</div>";
+
+      box.innerHTML+=html;
+
+    });
+
+  }
+
+  show("quizScreen");
+
+}
+
+
+/* =====================================================
+   SUBMIT QUIZ
+===================================================== */
+
+function submitQuiz(){
+
+  const questions=
